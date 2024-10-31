@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da6002ff-bd2c-4864-a947-2ea3b88c0e13" name="更改" comment="v1.1_添加状态返回" />
+    <list default="true" id="da6002ff-bd2c-4864-a947-2ea3b88c0e13" name="更改" comment="v1.1_修改/api端点">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +126,7 @@
       <workItem from="1720175688329" duration="3265000" />
       <workItem from="1730293648033" duration="615000" />
       <workItem from="1730335005549" duration="18000" />
-      <workItem from="1730337793295" duration="6192000" />
+      <workItem from="1730337793295" duration="6865000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore">
       <option name="closed" value="true" />
@@ -245,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730359488353</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="v1.1_修改/api端点">
+      <option name="closed" value="true" />
+      <created>1730361763181</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1730361763181</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +272,8 @@
     <MESSAGE value="v1.1_更新dockerfile" />
     <MESSAGE value="v1.1_修改错误" />
     <MESSAGE value="v1.1_添加状态返回" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.1_添加状态返回" />
+    <MESSAGE value="v1.1_修改/api端点" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1_修改/api端点" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/copymanga_proxy_fanstapi$copymanga_proxy_fanstapi.coverage" NAME="copymanga-proxy-fanstapi 覆盖结果" MODIFIED="1720177790140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
