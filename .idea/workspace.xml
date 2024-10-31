@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da6002ff-bd2c-4864-a947-2ea3b88c0e13" name="更改" comment="v1.1_更新依赖" />
+    <list default="true" id="da6002ff-bd2c-4864-a947-2ea3b88c0e13" name="更改" comment="v1.1_更新dockerfile" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -123,7 +123,7 @@
       <workItem from="1720175688329" duration="3265000" />
       <workItem from="1730293648033" duration="615000" />
       <workItem from="1730335005549" duration="18000" />
-      <workItem from="1730337793295" duration="4125000" />
+      <workItem from="1730337793295" duration="4451000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore">
       <option name="closed" value="true" />
@@ -205,7 +205,23 @@
       <option name="project" value="LOCAL" />
       <updated>1730357815746</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="v1.1_更新dockerfile">
+      <option name="closed" value="true" />
+      <created>1730358293777</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1730358293777</updated>
+    </task>
+    <task id="LOCAL-00012" summary="v1.1_更新dockerfile">
+      <option name="closed" value="true" />
+      <created>1730358381219</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1730358381219</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +234,8 @@
     <MESSAGE value="v1.1_图像代理测试" />
     <MESSAGE value="v1.1_修改dockerfile的python版本" />
     <MESSAGE value="v1.1_更新依赖" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.1_更新依赖" />
+    <MESSAGE value="v1.1_更新dockerfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1_更新dockerfile" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/copymanga_proxy_fanstapi$copymanga_proxy_fanstapi.coverage" NAME="copymanga-proxy-fanstapi 覆盖结果" MODIFIED="1720177790140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
