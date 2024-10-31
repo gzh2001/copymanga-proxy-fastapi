@@ -16,7 +16,7 @@ class ProxyResponse(BaseModel):
     headers: dict
 
 # 校验密钥
-SECRET_CODE = "your_secret_code"
+SECRET_CODE = "111111"
 
 def verify_code(code: str):
     if code != SECRET_CODE:
@@ -33,12 +33,12 @@ async def proxy_request(url: HttpUrl) -> ProxyResponse:
         )
 
 # 端点 "/img"
-@app.post("/img", response_model=ProxyResponse)
-async def proxy_img(request: ProxyRequest):
-    verify_code(request.code)
-    if not request.url.startswith("https://hi77-overseas.mangafuna.xyz/"):
+@app.get("/img", response_model=ProxyResponse)
+async def proxy_img(code: str, url: HttpUrl):
+    verify_code(code)
+    if not url.startswith("https://hi77-overseas.mangafuna.xyz/"):
         raise HTTPException(status_code=400, detail="Invalid URL")
-    return await proxy_request(request.url)
+    return await proxy_request(url)
 
 # 端点 "/api"
 @app.post("/api", response_model=ProxyResponse)
