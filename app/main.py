@@ -70,12 +70,12 @@ async def proxy_img(code: str, url: HttpUrl):
 
 
 # 端点 "/api"
-@app.post("/api", response_model=ProxyResponse)
-async def proxy_api(request: ProxyRequest):
-    verify_code(request.code)
-    if urlparse(str(request.url)).netloc != "api.mangacopy.com":
+@app.get("/api", response_model=ProxyResponse)
+async def proxy_api(code: str, url: HttpUrl):
+    verify_code(code)
+    if urlparse(str(url)).netloc != "api.mangacopy.com":
         raise HTTPException(status_code=400, detail="Invalid URL")
-    return await proxy_request(request.url)
+    return await proxy_request(url)
 
 # 运行命令：uvicorn filename:app --reload
 # 请将 "your_secret_code" 替换为您的实际密钥，并将 "filename" 替换为您的 Python 文件名。
