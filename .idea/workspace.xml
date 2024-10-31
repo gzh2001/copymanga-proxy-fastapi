@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da6002ff-bd2c-4864-a947-2ea3b88c0e13" name="更改" comment="v1.1_dev">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="da6002ff-bd2c-4864-a947-2ea3b88c0e13" name="更改" comment="v1.1_图像代理测试">
+      <change afterPath="$PROJECT_DIR$/Dockerfile.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +87,7 @@
   </component>
   <component name="RunManager">
     <configuration name="copymanga-proxy-fanstapi" type="Python.FastAPI">
-      <option name="additionalOptions" value="--reload --host 0.0.0.0" />
+      <option name="additionalOptions" value="--reload --host 0.0.0.0 --workers 4" />
       <option name="file" value="$PROJECT_DIR$/app/main.py" />
       <module name="copymanga-proxy-fanstapi" />
       <option name="ENV_FILES" value="" />
@@ -94,6 +96,7 @@
       <envs>
         <env name="http_proxy" value="http://127.0.0.1:10809" />
         <env name="https_proxy" value="http://127.0.0.1:10809" />
+        <env name="SECRET_CODE" value="Aa147258" />
       </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
@@ -125,7 +128,7 @@
       <workItem from="1720175688329" duration="3265000" />
       <workItem from="1730293648033" duration="615000" />
       <workItem from="1730335005549" duration="18000" />
-      <workItem from="1730337793295" duration="1072000" />
+      <workItem from="1730337793295" duration="3288000" />
     </task>
     <task id="LOCAL-00001" summary=".gitignore">
       <option name="closed" value="true" />
@@ -167,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730338498874</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="v1.1_图像代理测试">
+      <option name="closed" value="true" />
+      <created>1730338908636</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730338908636</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,12 +188,13 @@
     <MESSAGE value=".gitignore" />
     <MESSAGE value="v1.0" />
     <MESSAGE value="v1.1_dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.1_dev" />
+    <MESSAGE value="v1.1_图像代理测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1_图像代理测试" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/copymanga_proxy_fanstapi$copymanga_proxy_fanstapi.coverage" NAME="copymanga-proxy-fanstapi 覆盖结果" MODIFIED="1720177790140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/copymanga_proxy_fanstapi$main.coverage" NAME="main 覆盖结果" MODIFIED="1720175713244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/copymanga_proxy_fastapi$copymanga_proxy_fanstapi.coverage" NAME="copymanga-proxy-fanstapi 覆盖结果" MODIFIED="1730338728571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/copymanga_proxy_fastapi$copymanga_proxy_fanstapi.coverage" NAME="copymanga-proxy-fanstapi 覆盖结果" MODIFIED="1730357190349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/copymanga_proxy_fastapi$main.coverage" NAME="main 覆盖结果" MODIFIED="1730337924342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
 </project>

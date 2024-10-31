@@ -2,8 +2,14 @@ from fastapi import FastAPI, HTTPException, Response
 from pydantic import BaseModel, HttpUrl
 import httpx
 from urllib.parse import urlparse
+import os
+import logging
 
 app = FastAPI()
+
+# 设置日志记录
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # 请求模型类
 class ProxyRequest(BaseModel):
@@ -17,7 +23,14 @@ class ProxyResponse(BaseModel):
     headers: dict
 
 # 校验密钥
-SECRET_CODE = "111111"
+SECRET_CODE = os.getenv("SECRET_CODE")
+
+if not SECRET_CODE:
+    logger.error("SECRET_CODE environment variable is not set. Exiting.")
+    raise SystemExit("SECRET_CODE environment variable is required.")
+
+# 打印密钥到日志中
+logger.info(f"SECRET_CODE: {SECRET_CODE}")
 
 def verify_code(code: str):
     if code != SECRET_CODE:
