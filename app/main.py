@@ -1,6 +1,7 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Response
 from pydantic import BaseModel, HttpUrl
 import httpx
+from urllib.parse import urlparse
 
 app = FastAPI()
 
@@ -23,9 +24,9 @@ def verify_code(code: str):
         raise HTTPException(status_code=403, detail="Invalid code")
 
 # 反向代理请求处理函数
-async def proxy_request(url: HttpUrl) -> ProxyResponse:
+async def proxy_request(url: str) -> ProxyResponse:
     async with httpx.AsyncClient() as client:
-        response = await client.get(url)
+        response = await client.get(str(url))
         return ProxyResponse(
             status_code=response.status_code,
             content=response.text,
@@ -33,18 +34,22 @@ async def proxy_request(url: HttpUrl) -> ProxyResponse:
         )
 
 # 端点 "/img"
-@app.get("/img", response_model=ProxyResponse)
+@app.get("/img")
 async def proxy_img(code: str, url: HttpUrl):
     verify_code(code)
-    if not url.startswith("https://hi77-overseas.mangafuna.xyz/"):
+    if urlparse(str(url)).netloc != "hi77-overseas.mangafuna.xyz":
         raise HTTPException(status_code=400, detail="Invalid URL")
-    return await proxy_request(url)
+    async with httpx.AsyncClient() as client:
+        response = await client.get(str(url))
+        if response.status_code != 200:
+            raise HTTPException(status_code=response.status_code, detail="Failed to fetch image")
+        return Response(content=response.content, media_type=response.headers.get('content-type'))
 
 # 端点 "/api"
 @app.post("/api", response_model=ProxyResponse)
 async def proxy_api(request: ProxyRequest):
     verify_code(request.code)
-    if not request.url.startswith("https://api.mangacopy.com/"):
+    if urlparse(str(request.url)).netloc != "api.mangacopy.com":
         raise HTTPException(status_code=400, detail="Invalid URL")
     return await proxy_request(request.url)
 
