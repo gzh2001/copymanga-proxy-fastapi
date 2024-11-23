@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException, Response
 from pydantic import BaseModel, HttpUrl
 import httpx
+from urllib.parse import urlparse
 import re
 import os
 import logging
@@ -43,7 +44,13 @@ IMG_URL_PATTERN = r"^https://hi77-overseas\.mangafuna\.xyz"
 # 反向代理请求处理函数
 async def proxy_request(url: str) -> ProxyResponse:
     async with httpx.AsyncClient() as client:
-        response = await client.get(str(url))
+        try:
+            response = await client.get(str(url))
+            response.raise_for_status()
+        except httpx.HTTPStatusError as exc:
+            raise HTTPException(status_code=exc.response.status_code, detail=f"Error fetching URL: {exc}")
+        except httpx.RequestError as exc:
+            raise HTTPException(status_code=500, detail=f"An error occurred while requesting {url}: {exc}")
         return ProxyResponse(
             status_code=response.status_code,
             content=response.text,
@@ -61,19 +68,30 @@ async def proxy_img(code: str, url: HttpUrl):
     if not re.match(IMG_URL_PATTERN, str(url)):
         raise HTTPException(status_code=400, detail="Invalid URL")
     async with httpx.AsyncClient() as client:
-        response = await client.get(str(url))
-        if response.status_code != 200:
-            raise HTTPException(status_code=response.status_code, detail="Failed to fetch image")
+        try:
+            response = await client.get(str(url))
+            response.raise_for_status()
+        except httpx.HTTPStatusError as exc:
+            raise HTTPException(status_code=exc.response.status_code, detail=f"Failed to fetch image: {exc}")
+        except httpx.RequestError as exc:
+            raise HTTPException(status_code=500, detail=f"An error occurred while requesting {url}: {exc}")
         return Response(content=response.content, media_type=response.headers.get('content-type'))
 
 # 端点 "/api"
 @app.get("/api")
 async def proxy_api(code: str, url: HttpUrl):
     verify_code(code)
+    # 【修改的部分】
     if not re.match(API_URL_PATTERN, str(url)):
         raise HTTPException(status_code=400, detail="Invalid URL")
     async with httpx.AsyncClient() as client:
-        response = await client.get(str(url))
+        try:
+            response = await client.get(str(url))
+            response.raise_for_status()
+        except httpx.HTTPStatusError as exc:
+            raise HTTPException(status_code=exc.response.status_code, detail=f"Failed to fetch data: {exc}")
+        except httpx.RequestError as exc:
+            raise HTTPException(status_code=500, detail=f"An error occurred while requesting {url}: {exc}")
         return Response(content=response.content, media_type=response.headers.get('content-type'))
 # 运行命令：uvicorn filename:app --reload
 # 请将 "your_secret_code" 替换为您的实际密钥，并将 "filename" 替换为您的 Python 文件名。
