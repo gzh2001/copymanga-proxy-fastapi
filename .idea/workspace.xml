@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="da6002ff-bd2c-4864-a947-2ea3b88c0e13" name="更改" comment="v1.1_2 添加错误处理">
-      <change afterPath="$PROJECT_DIR$/tests/test_main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copymanga-proxy-fanstapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copymanga-proxy-fanstapi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="da6002ff-bd2c-4864-a947-2ea3b88c0e13" name="更改" comment="v1.1_2 添加测试文件（未验证）" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -307,7 +302,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732374575079</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="v1.1_2 添加日志">
+      <option name="closed" value="true" />
+      <created>1732375750951</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1732375750951</updated>
+    </task>
+    <task id="LOCAL-00024" summary="v1.1_2 添加测试文件（未验证）">
+      <option name="closed" value="true" />
+      <created>1732376008711</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1732376008711</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,12 +349,14 @@
     <MESSAGE value="v1.1_1 修改匹配模式" />
     <MESSAGE value="v1.1_2 更新依赖包" />
     <MESSAGE value="v1.1_2 添加错误处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1.1_2 添加错误处理" />
+    <MESSAGE value="v1.1_2 添加日志" />
+    <MESSAGE value="v1.1_2 添加测试文件（未验证）" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1.1_2 添加测试文件（未验证）" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/copymanga_proxy_fanstapi$main.coverage" NAME="main 覆盖结果" MODIFIED="1720175713244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
     <SUITE FILE_PATH="coverage/copymanga_proxy_fanstapi$copymanga_proxy_fanstapi.coverage" NAME="copymanga-proxy-fanstapi 覆盖结果" MODIFIED="1720177790140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/copymanga_proxy_fastapi$copymanga_proxy_fanstapi.coverage" NAME="copymanga-proxy-fanstapi 覆盖结果" MODIFIED="1732374585372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/copymanga_proxy_fastapi$copymanga_proxy_fanstapi.coverage" NAME="copymanga-proxy-fanstapi 覆盖结果" MODIFIED="1732375766434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/copymanga_proxy_fastapi$main.coverage" NAME="main 覆盖结果" MODIFIED="1730337924342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
 </project>

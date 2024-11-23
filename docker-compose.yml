@@ -1,0 +1,11 @@
+version: '3.9'  # Docker Compose 文件版本
+
+services:
+  app:
+    build:
+      context: . # Dockerfile 所在目录
+    container_name: copymanga-proxy
+    ports:
+      - "8000:80"  # 将主机的 3000 端口映射到容器的 3000 端口
+    environment:
+      SECRET_CODE: ""   # 密钥
