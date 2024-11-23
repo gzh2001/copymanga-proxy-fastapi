@@ -45,7 +45,7 @@ def verify_code(code: str):
 
 # 匹配的URL模式
 API_URL_PATTERN = r"^https://api\.(copymanga|mangacopy)\.\w+/api/"
-IMG_URL_PATTERN = r"^https://hi77-overseas\.mangafuna\.xyz"
+IMG_URL_PATTERN = r"^https://[0-9a-z-]+\.mangafun[a-z]\.(xyz|fun)/"
 
 
 # 反向代理请求处理函数
