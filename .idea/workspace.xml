@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="da6002ff-bd2c-4864-a947-2ea3b88c0e13" name="更改" comment="v1.1_修改/api端点">
+      <change beforePath="$PROJECT_DIR$/.idea/copymanga-proxy-fanstapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copymanga-proxy-fanstapi.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +94,8 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="http_proxy" value="http://127.0.0.1:10809" />
-        <env name="https_proxy" value="http://127.0.0.1:10809" />
+        <env name="http_proxy" value="http://192.168.79.1:10809" />
+        <env name="https_proxy" value="http://192.168.79.1:10809" />
         <env name="SECRET_CODE" value="Aa147258" />
       </envs>
       <option name="SDK_HOME" value="" />
@@ -291,9 +294,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="v1.1_修改/api端点" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/copymanga_proxy_fanstapi$copymanga_proxy_fanstapi.coverage" NAME="copymanga-proxy-fanstapi 覆盖结果" MODIFIED="1720177790140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/copymanga_proxy_fanstapi$main.coverage" NAME="main 覆盖结果" MODIFIED="1720175713244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
-    <SUITE FILE_PATH="coverage/copymanga_proxy_fastapi$copymanga_proxy_fanstapi.coverage" NAME="copymanga-proxy-fanstapi 覆盖结果" MODIFIED="1730357190349" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/copymanga_proxy_fanstapi$copymanga_proxy_fanstapi.coverage" NAME="copymanga-proxy-fanstapi 覆盖结果" MODIFIED="1720177790140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/copymanga_proxy_fastapi$copymanga_proxy_fanstapi.coverage" NAME="copymanga-proxy-fanstapi 覆盖结果" MODIFIED="1732373121380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/copymanga_proxy_fastapi$main.coverage" NAME="main 覆盖结果" MODIFIED="1730337924342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/app" />
   </component>
 </project>
